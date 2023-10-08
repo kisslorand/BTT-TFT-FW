@@ -18,10 +18,10 @@ These precompiled files are more updated/enhanced, they contain unmerged pull re
 <br>
 
 &emsp; __2023.X.8:__
-  - __IMPORTANT:__ DMA based serial transmission implemented.It brings an even more stability improvement, it gives a speed boost of at least 20% to the TFT during print. ([PR #2844](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2844))
+  - __IMPORTANT:__ DMA based serial transmission implemented. It brings an even more stability improvement, it gives a speed boost of at least 20% to the TFT during print. ([PR #2844](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2844))
   - reworked the buzzer handler, it is purely interrupt based with the benefit of more consistent sound patterns and no interference with other tasks ([PR #2846](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2846))
   - fixed some bugs in the numpad ([PR #2856](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2856))
-  - rework of the "Corner Leveling" menu to accomodate more printer setups to the latest Marlin changes ([PR #2825](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2825))
+  - rework of the "Corner Leveling" menu to accommodate more printer setups to the latest Marlin changes ([PR #2825](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2825))
     - Please note that this change made the "config.ini" file to have some parameters removed ("Machine size") and some new parameters added ("Motion limits" and "Bed size"). Update your "config.ini" according to your printer's setup.
   - removed "Disarm" button from the manual leveling menu (there was no practical use of it there)  ([PR #2825](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2825))
     - there's no submenu there anymore, "Distance" and "Shim" buttons are visible in that menu
