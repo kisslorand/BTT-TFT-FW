@@ -374,7 +374,7 @@ _________________________________________________________
   - `MKS_GD_TFT28_V*_*.*.x.bin` renamed to `MKSTFT28EVO.bin`
 
 &nbsp;  2. With original bootloader upon FW update the SPI flash gets deleted so copy to the root of the SD Card:
-  - "TFT28" folder from the theme of your choince
+  - "TFT28" folder from the theme of your choice
   - "config.ini"
   - "language_xx.ini" (optional)
 
