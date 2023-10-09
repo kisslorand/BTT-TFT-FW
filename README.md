@@ -17,6 +17,12 @@ These precompiled files are more updated/enhanced, they contain unmerged pull re
 ### Changelog:
 <br>
 
+&emsp; __2023.X.9:__
+  - fixed the issue with thumbnails disappearing when going through files
+  - fixed the issue with some TFT variants where the text in the "Info" menu was shifted downwards so the lower lines were not legible
+
+<br>
+
 &emsp; __2023.X.8:__
   - __IMPORTANT:__ DMA based serial transmission implemented. It brings an even more stability improvement, it gives a speed boost of at least 20% to the TFT during print. ([PR #2844](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2844))
   - reworked the buzzer handler, it is purely interrupt based with the benefit of more consistent sound patterns and no interference with other tasks ([PR #2846](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2846))
