@@ -17,6 +17,14 @@ These precompiled files are more updated/enhanced, they contain unmerged pull re
 ### Changelog:
 <br>
 
+&emsp; __2023.XII.31:__
+  - fixed an issue with the GUI at end of the print, it wouldn't switch to the end print interface if the gcode file had at the end anything else than one single new line; it now works regardless of what is at the end of the gcode file
+  - fixed the issue with icons not updating from the USB stick ([PR #2879](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2879))
+  - fixed the issue during the icons update where the icon name was different from the icon displayed ([PR #2879](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2879))
+  - during fonts update the displayed text (font file name, font file size, update percentage) was cluttered, rearranged the display of the fields into a readable form ([PR #2879](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2879))
+
+<br>
+
 &emsp; __2023.X.9:__
   - fixed the issue with thumbnails disappearing when going through files
   - fixed the issue with some TFT variants where the text in the "Info" menu was shifted downwards so the lower lines were not legible
