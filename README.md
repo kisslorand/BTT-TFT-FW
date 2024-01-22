@@ -1,5 +1,12 @@
 <!-- omit in toc -->
 
+## If you like my work, support me with a 🍺 or a ☕. Thank you!
+[![Support me!](https://storage.ko-fi.com/cdn/useruploads/post/87a936d3-05e8-442e-a92f-f4fe645d6e76_kofi_button_red.png)](https://ko-fi.com/kisslorand)
+<br>
+
+---
+---
+
 # BTT-TFT-FW
 
 ![GitHub](https://img.shields.io/github/license/bigtreetech/bigtreetech-TouchScreenFirmware.svg)
@@ -7,12 +14,16 @@
 ![GitHub Release Date](https://img.shields.io/badge/release_date-July_2023-red)
 [![Build Status](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/workflows/Build%20Test/badge.svg?branch=master)](https://github.com/bigtreetech/bigtreetech-TouchScreenFirmware/actions)
 
+
+
 ---
 <br>
 
 __This repository contains precompiled FW for Bigtreetech TFTs and compatible MKS TFTs.
-It is based on the master branch of the [Bigtreetech's TFT Firmware repository](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware).<br>
+It is based on the master branch of the [Bigtreetech's TFT Firmware repository](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware) as of 2023.VII.31.
 These precompiled files are more updated/enhanced, they contain unmerged pull requests with bugfixes and enhancements and contain additional and not published bugfixes and enhacements as described in the changelog.__
+
+__Another big difference from the original firmware is the implementation of the feature called "Hesitation Guard". It is fundamentally different from the ADVANCED_OK present in the original firmware. ADVANCED_OK is deprecated, no one really uses that, it only mitigates the outcome of a problem and creates [other issues](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/issues/2870). On the other hand Hesitation Guard deals with the root of the issue and it does it dynamically, based on the momentary load of the TFT. As the name suggests, this feature guards against hesitations during printing (resulting in blobs) from TFT media (SD Card, USB).__
 
 ### Changelog:
 <br>
