@@ -28,6 +28,14 @@ __Another big difference from the original firmware is the implementation of the
 ### Changelog:
 <br>
 
+&emsp; __2025.I.3:__
+  - fixed a bug introduced by a Marlin change (the KINEMATICS parameter in response for M115 as of [MarlinFirmware/Marlin@3fd175a](https://github.com/MarlinFirmware/Marlin/commit/3fd175a))
+    - this fix is not the same as in the original firmware as it introduced a new bug affecting those with more than one extruder ([PR #2913](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2913))
+  - fixed some bugs in the Corner Leveling menu (menu title sometimes scrambled or wrong label, TFT would hang in case of probing error)
+  - GUI enhancement in the Corner Leveling menu (a previously probed corner value will show "---" in case of probing error insted of the previously probed value)
+
+<br>
+
 &emsp; __2023.XII.31:__
   - fixed an issue with the GUI at end of the print, it wouldn't switch to the end print interface if the gcode file had at the end anything else than one single new line; it now works regardless of what is at the end of the gcode file
   - fixed the issue with icons not updating from the USB stick ([PR #2879](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2879))
