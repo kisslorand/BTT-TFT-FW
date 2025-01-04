@@ -28,6 +28,12 @@ __Another big difference from the original firmware is the implementation of the
 ### Changelog:
 <br>
 
+&emsp; __2025.I.4:__
+  - updated README.md with the link to the BTT TFT Touchscreen Support plugin
+  - minor tweak in parsing the config file
+
+<br>
+
 &emsp; __2025.I.3:__
   - fixed a bug introduced by a Marlin change (the KINEMATICS parameter in response for M115 as of [MarlinFirmware/Marlin@3fd175a](https://github.com/MarlinFirmware/Marlin/commit/3fd175a))
     - this fix is not the same as in the original firmware as it introduced a new bug affecting those with more than one extruder ([PR #2913](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/pull/2913))
@@ -740,7 +746,7 @@ When on Printing menu, pressing on the **pause**, **resume** and **stop** button
 The remote host must properly handle the received notifications. For example, if `//action:notification remote pause` is received then the remote host must effectively pause the print and send `M118 P0 A1 action:pause` in order to trigger the pause action to the TFT.
 
 **NOTES:**
-- A new plugin on OctoPrint implementing the above protocol should be the preferable way (available to everyone)
+- The [_BTT TFT Touchscreen Support_ plugin](https://github.com/jounathaen/octoprint_btt_touch_support) provides this integration for Octoprint
 - With the exception of TFT70, the maximum number of displayable layer count is 999 (there's no space to display layer number and count if the layer count is above 999)
 
 ### Adding Gcode Thumbnails
