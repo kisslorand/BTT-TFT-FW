@@ -9,12 +9,7 @@
 
 # BTT-TFT-FW
 
-![GitHub](https://img.shields.io/github/license/bigtreetech/bigtreetech-TouchScreenFirmware.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/bigtreetech/bigtreetech-TouchScreenFirmware.svg)](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/graphs/contributors)
-![GitHub Release Date](https://img.shields.io/badge/release_date-July_2023-red)
-[![Build Status](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/workflows/Build%20Test/badge.svg?branch=master)](https://github.com/bigtreetech/bigtreetech-TouchScreenFirmware/actions)
-
-
+<a href="https://github.com/kisslorand/BTT-TFT-FW/archive/refs/heads/main.zip"><img alt="Release date" src="https://img.shields.io/github/last-commit/kisslorand/BTT-TFT-FW/main.svg?label=Release%20date&color=red"></a>
 
 ---
 <br>
@@ -26,6 +21,12 @@ These precompiled files are more updated/enhanced, they contain unmerged pull re
 __Another big difference from the original firmware is the implementation of the feature called "Hesitation Guard". It is fundamentally different from the ADVANCED_OK present in the original firmware. ADVANCED_OK is deprecated, no one really uses that, it only mitigates the outcome of a problem and creates [other issues](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/issues/2870). On the other hand Hesitation Guard deals with the root of the issue and it does it dynamically, based on the momentary load of the TFT. As the name suggests, this feature guards against hesitations during printing (resulting in blobs) from TFT media (SD Card, USB).__
 
 ### Changelog:
+<br>
+
+&emsp; __2025.I.5:__
+  - some edge-case bugs fixed, bugs that were inherited from the [main repository](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware)
+  - updated README.md
+
 <br>
 
 &emsp; __2025.I.4:__
