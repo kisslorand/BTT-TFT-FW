@@ -23,6 +23,14 @@ __Another big difference from the original firmware is the implementation of the
 ### Changelog:
 <br>
 
+&emsp; __2025.I.18:__
+  - increased stability and speed when printing from the TFT's USB stick or SD card
+    - While there were no prior issues, this improvement ensures even smoother and faster performance because... why not strive for perfection? 🙂
+  - timer overflow fix
+    - Addressed an issue where the OS timer overflowed after 54 days of continuous operation, potentially causing the TFT to freeze or behave unpredictably. This fix leverages a well-established technique from low-level programming to handle wraparound in unsigned integer arithmetic, ensuring stable and reliable performance over extended periods.
+
+<br>
+
 &emsp; __2025.I.5:__
   - some edge-case bugs fixed, bugs that were inherited from the [main repository](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware)
   - updated README.md
