@@ -18,9 +18,22 @@ __This repository contains precompiled FW for Bigtreetech TFTs and compatible MK
 It is based on the master branch of the [Bigtreetech's TFT Firmware repository](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware) as of 2023.VII.31.
 These precompiled files are more updated/enhanced, they contain unmerged pull requests with bugfixes and enhancements and contain additional and not published bugfixes and enhacements as described in the changelog.__
 
-__Another big difference from the original firmware is the implementation of the feature called "Hesitation Guard". It is fundamentally different from the ADVANCED_OK present in the original firmware. ADVANCED_OK is deprecated, no one really uses that, it only mitigates the outcome of a problem and creates [other issues](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/issues/2870). On the other hand Hesitation Guard deals with the root of the issue and it does it dynamically, based on the momentary load of the TFT. As the name suggests, this feature guards against hesitations during printing (resulting in blobs) from TFT media (SD Card, USB).__
+__Another big difference from the original firmware is the implementation of the feature called "Hesitation Guard". It is fundamentally different from the ADVANCED_OK present in the original firmware. ADVANCED_OK is deprecated, no one really uses that, it only mitigates the outcome of a problem and creates [other issues](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/issues/2870). On the other hand Hesitation Guard deals with the root of the issue and it does it dynamically, based on the momentary load of the TFT. As the name suggests, this feature guards against hesitations during printing (resulting in blobs) from TFT media (SD Card, USB).<br><br>...also this firmware IS compatible with RepRap firmware.__
 
 ### Changelog:
+<br>
+
+&emsp; __2025.II.13:__
+  - added compatibility with the latest stable release and beta version of RepRap firmware as of the time of this release
+  - bug fix - Emulated M109/M190 Commands
+    - Resolved an issue where consecutive M109 or M190 commands were not properly handled. Previously, the TFT would wait only after the first command and skip the subsequent ones.
+    - The fix required a comprehensive refactor of the temperature request, send, feedback, and read logic. Assumptions have been removed, the process now fully relies on host feedback.
+  - speed increase by eliminating some resource-intensive calculations
+  - enhanced the Hesitation Guard feature by adding to its robustness
+  - bug fix - M118 Command for RepRap Firmware:
+    - corrected the M118 syntax for RepRap firmware, ensuring proper functionality
+    - a major drawback of this issue was that an ongoing print couldn't be stopped/cancelled from the GUI
+
 <br>
 
 &emsp; __2025.I.18:__
