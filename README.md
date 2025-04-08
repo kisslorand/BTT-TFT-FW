@@ -18,9 +18,26 @@ __This repository contains precompiled FW for Bigtreetech TFTs and compatible MK
 It is based on the master branch of the [Bigtreetech's TFT Firmware repository](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware) as of 2023.VII.31.
 These precompiled files are more updated/enhanced, they contain unmerged pull requests with bugfixes and enhancements and contain additional and not published bugfixes and enhacements as described in the changelog.__
 
-__Another big difference from the original firmware is the implementation of the feature called "Hesitation Guard". It is fundamentally different from the ADVANCED_OK present in the original firmware. ADVANCED_OK is deprecated, no one really uses that, it only mitigates the outcome of a problem and creates [other issues](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/issues/2870). On the other hand Hesitation Guard deals with the root of the issue and it does it dynamically, based on the momentary load of the TFT. As the name suggests, this feature guards against hesitations during printing (resulting in blobs) from TFT media (SD Card, USB).<br><br>...also this firmware IS compatible with RepRap firmware.__
+__Another big difference from the original firmware is the implementation of the feature called "Hesitation Guard". It is fundamentally different from the ADVANCED_OK present in the original firmware. ADVANCED_OK is deprecated, no one really uses that, it only mitigates the outcome of a problem and creates [other issues](https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware/issues/2870). On the other hand Hesitation Guard deals with the root of the issue and it does it dynamically, based on the momentary load of the TFT. As the name suggests, this feature guards against hesitations during printing (resulting in blobs) from TFT media (SD Card, USB).<br>There's also a feature present in this firmware, a feature that no other TFT firmware has. It is the automatic bed heatsoak function with configurable soak time calculation parameter.<br><br>...and this firmware IS compatible with RepRap firmware.__
+
 
 ### Changelog:
+<br>
+
+&emsp; __2025.IV.8:__
+  - implemented a new feature, the bed heatsoak
+    - this new feature eliminates the need to manually perform heatsoak for the bed before a print job (needed for thermal expansion stabilisation)
+    - on the start of the print the TFT will automatically perform bed heatsoak based on the initial and target bed temperature and the "heatsoak rate" parameter set in the "config.ini" file
+    - this feature can be disabled by setting the "heatsoak rate" parameter in "config.ini" to the value of 0 (zero)
+    - during the heatsoak there's graphical info on the screen, the remaining soak time can be adjusted, the entire soak procedure can be cancelled
+
+    __Important!__
+      - Automatic bed heatsoak is performed only if `M140` or `M190` is present in the gcode file. Only the first occurence of any of these commands will be taken into consideration for the heatsoak operation, consecutive ones (if they exist) will be ignored by this function.
+
+      - The function is active only if printing is done from the TFT's SD card or USB.
+
+  - processing speed increase during print by eliminating some iterative checks before inserting each gcode command into the send queue, optimisation done by using precalculated values
+
 <br>
 
 &emsp; __2025.II.13:__
