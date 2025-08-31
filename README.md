@@ -24,6 +24,23 @@ __Another big difference from the original firmware is the implementation of the
 ### Changelog:
 <br>
 
+&emsp; __2025.VIII.31:__
+  - when the terminal is open, avoid sending M105 (request a temperature report as soon as possible from the host)
+  - DE language update
+  - CZ language update
+  - Typo fix (“fillament” → “filament”).
+  - M73 parse tweak:
+    - M73 reports remaining time in whole minutes, while the TFT also displays seconds. This caused the remaining time on the TFT to jump to whole minutes (0 seconds) each time an M73 was received.
+    - This tweak fixes the issue; the TFT will no longer jump to whole minutes continuously. It’s purely a visual change with no impact on the printing process.
+  - heating-related bugfix/tweak:
+    - Heating-settled acoustic feedback was working incorrectly when a cooldown was required; fixed.
+    - Acoustic feedback for reaching the desired temperature set from the TFT GUI is overridden by any other external heat request. Acoustic feedback is now active only if the TFT GUI was the last one requesting a temperature change.
+  - Fixed printed G-code filenames being displayed with an added 'gcode' prefix during printing on machines running RepRap firmware; now only the original filename is shown.
+    - Since RepRap prints only from the 'gcodes' folder in the root of the SD card inserted into the motherboard's SD card reader, the prefix was unnecessary.
+
+
+<br>
+
 &emsp; __2025.IV.8:__
   - implemented a new feature, the bed heatsoak
     - this new feature eliminates the need to manually perform heatsoak for the bed before a print job (needed for thermal expansion stabilisation)
